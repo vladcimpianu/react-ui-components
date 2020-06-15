@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import Range from './components/Range';
+import './components/range.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      rangeVal: 0
+    }
+    this.updateRange = this.updateRange.bind(this);
+  }
+  
+  updateRange(val) {
+    this.setState({
+      rangeVal: val
+    })
+  } 
+  
+  render() {
+    const { rangeVal } = this.state;
+    return (
+      <div>
+        <Range range={rangeVal} updateRange={this.updateRange}/>
+      </div>
+    )
+  }  
 }
 
 export default App;
