@@ -10,8 +10,7 @@ class Dropdown extends Component {
 
     handleOption = (e) => {
         e.preventDefault();
-        // this.state.display = e.target.display;
-        this.setState(this.state.display = e.target.display);
+        this.state.display.setState(e.target.display);
         alert(`You've selected ${e.target.value}`);
     };
 

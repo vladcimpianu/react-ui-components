@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Range from './components/Range';
 import Modal from './components/Modal';
 import FunctionalModal from './components/FunctionalModal';
 import CounterWithHooks from './components/CounterWithHooks';
 import Dropdown from './components/Dropdown';
 import Accordion from './components/Accordion';
+import Happy from './components/Happy';
+import Tabs from './components/Tabs';
 import './components/modal.css';
 import './App.css';
 
@@ -19,6 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
+        <Happy />
         <Range />
         <button 
           className='modal-btn' 
@@ -46,7 +49,7 @@ class App extends React.Component {
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>          
               </div>
         </ Accordion>
-
+        <Tabs />
       </div>
     )
   }  
