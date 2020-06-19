@@ -1,0 +1,31 @@
+.popover {
+	width: 25%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.popover-btn {
+	width: 200px;
+	padding: 5px;
+	color: #fff;
+	background-color: #444444;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 5px auto;
+}
+
+.popover-content {
+	border: 1px solid #000000;
+	border-radius: 10px;
+	padding: 5px;
+	width: 200px;
+	background-color: #eee;
+}
+
+.popover-content h2 {
+	border-bottom: 1px solid #000000;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}

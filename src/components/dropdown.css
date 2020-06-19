@@ -1,12 +1,30 @@
-.dropdown  {
-    margin: 25px;
-    display: inline-block;
-    position: relative;
-}
-select {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    width: 200px;
+.dropdown {
+	width: 25%;
+	height: 160px;
+	text-align: center;
 }
 
+.dropdown-btn {
+	border: 0;
+	margin: 1em;
+	background-color: #000000;
+	padding: 10px 20px;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.dropdown-list {
+	position: relative;
+	list-style: none;
+	display: none;
+	margin: .5em;
+	padding: 0;
+	z-index: 1;
+}
+.dropdown-list li {
+	margin: 5px;
+	padding: 1px;
+	background-color: #f4f4f4;
+	color: black;
+	cursor: pointer;
+}
