@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Range from './components/Range';
 import Modal from './components/Modal';
 import FunctionalModal from './components/FunctionalModal';
 import CounterWithHooks from './components/CounterWithHooks';
 import Dropdown from './components/Dropdown';
+import Accordion from './components/Accordion';
 import './components/modal.css';
 import './App.css';
 
@@ -32,6 +33,20 @@ class App extends React.Component {
         <FunctionalModal isOpen={this.state.isOpen} onClose={ (e) => this.setState({ isOpen: false })}>Lorem ipsum functional</ FunctionalModal>
         <CounterWithHooks />
         <Dropdown/>
+
+        <Accordion title="Header">
+              <div> 
+                <h2>First Header</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>          
+              </div>              
+              <div> 
+                <h2>Second Header</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>          
+              </div>
+        </ Accordion>
+
       </div>
     )
   }  

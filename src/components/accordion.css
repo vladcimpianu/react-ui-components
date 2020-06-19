@@ -1,0 +1,24 @@
+
+.accordion{
+    width: 100%;
+}
+.header {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: #FFF;
+    border-radius: 0 0 5px 5px;
+    }
+.header:hover{
+    background-color: #ccc;
+    color: #000;
+    transition: background-color .2s;
+
+}
+.content {
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+    padding: 15px;
+    background-color: #bbb;
+}
