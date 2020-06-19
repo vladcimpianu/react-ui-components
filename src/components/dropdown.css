@@ -1,0 +1,12 @@
+.dropdown  {
+    margin: 25px;
+    display: inline-block;
+    position: relative;
+}
+select {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    width: 200px;
+}
+

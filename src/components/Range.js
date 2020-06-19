@@ -1,28 +1,32 @@
 import React from 'react';
+import './range.css';
+
 
 class Range extends React.Component {
     constructor(props) {
       super(props);
+      this.state = {rangeVal: 0}
       this.updateRange = this.updateRange.bind(this);
     }
-    
-    updateRange(e) {
-      this.props.updateRange(e.target.value);
-    }
+  
+    updateRange(event) {
+      this.setState({
+        rangeVal: event.target.value
+      });
+    } 
     
     render() {
-      // console.log(this.props);
-      const { range } = this.props;
+      const { rangeVal } = this.state;
       return (
         <div>
           <input className="range" type="range"
-            value={range}
+            value={rangeVal}
             min="0"
             max="10"
             step="1"
             onChange={this.updateRange}
           />
-          <span className="range-output">{range}</span>
+          <span className="range-output">{rangeVal}</span>
         </div>
       )
     }

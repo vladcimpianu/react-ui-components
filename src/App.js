@@ -1,7 +1,9 @@
 import React from 'react';
 import Range from './components/Range';
 import Modal from './components/Modal';
-import './components/range.css';
+import FunctionalModal from './components/FunctionalModal';
+import CounterWithHooks from './components/CounterWithHooks';
+import Dropdown from './components/Dropdown';
 import './components/modal.css';
 import './App.css';
 
@@ -9,23 +11,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rangeVal: 0,
       isOpen: false
     }
-    this.updateRange = this.updateRange.bind(this);
   }
   
-  updateRange(val) {
-    this.setState({
-      rangeVal: val
-    })
-  } 
-  
   render() {
-    const { rangeVal } = this.state;
     return (
       <div className='App'>
-        <Range range={rangeVal} updateRange={this.updateRange}/>
+        <Range />
         <button 
           className='modal-btn' 
           onClick={ (e) => this.setState({ isOpen: true })}>
@@ -35,7 +28,10 @@ class App extends React.Component {
           isOpen={this.state.isOpen} 
           onClose={ (e) => this.setState({ isOpen: false })}
         >Lorem ipsum id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor augue mauris augue neque gravida in fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque
-        </Modal>  
+        </Modal> 
+        <FunctionalModal isOpen={this.state.isOpen} onClose={ (e) => this.setState({ isOpen: false })}>Lorem ipsum functional</ FunctionalModal>
+        <CounterWithHooks />
+        <Dropdown/>
       </div>
     )
   }  
