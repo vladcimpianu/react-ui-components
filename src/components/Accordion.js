@@ -12,17 +12,20 @@ class Accordion extends Component {
         }
         
         togglePanel(e){
-        this.setState({open: !this.state.open})
+        this.setState(prevState => ({ open: !prevState.open }))
         }
         
     render() {
+        const title = this.props.title;
+        const children = this.props.children;
+        const open = this.state.open
         return (
             <div className='accordion'>
                 <div onClick={(e)=>this.togglePanel(e)} className="header">
-                    {this.props.title}
+                    { title }
                 </div>
 
-                {this.state.open ? (<div className="content">{this.props.children}</div>) : null}
+                {open ? (<div className="content"> { children } </div>) : null}
             </div>
         );
     }

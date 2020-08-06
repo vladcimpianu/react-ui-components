@@ -4,27 +4,26 @@ import './dropdown.css';
 class Dropdown extends Component {
     constructor(props) {
         super(props);
-        this.state = {display: 'Home'};
-        this.handleOption = this.handleOption.bind(this);
+        this.state = {displayDropdown: false};
     };
 
-    handleOption = (e) => {
-        e.preventDefault();
-        // this.state.display = e.target.display;
-        this.setState(this.state.display = e.target.display);
-        alert(`You've selected ${e.target.value}`);
-    };
+
+    handleDropdown = (e) => this.setState( (prevState) =>  ( { displayDropdown: !prevState.displayDropdown } ) );
 
     render() {
+        const showHide = this.state.displayDropdown ? 'block' : 'none';
+        const showHideStyle = { display: showHide };
         return (
-            <div className='dropdown'>
-                <select display={this.state.display} onChange={this.handleOption}>
-                    <option display="Home">Home</option>
-                    <option display="About">About</option>
-                    <option display="Contact">Contact</option>
-                    <option display="FAQ">FAQ</option>
-                </select>
-            </div>
+        <div class="dropdown">
+            <button className="dropdown-btn" onClick={ this.handleDropdown }>Menu</button>
+            <ul className="dropdown-list" style={ showHideStyle }>
+                <li>About</li>
+                <li>Our Work</li>
+                <li>Projects</li>
+                <li>FAQ</li>
+                <li>Contact</li>
+            </ul>
+        </div>
         )
     }
 };

@@ -1,0 +1,53 @@
+.tab-container {
+    max-width: 800px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: mintcream;
+}
+
+#nav-tab ul {
+    list-style: none;
+    padding: 0;
+    padding: 1em;
+}
+
+.nav li {
+    display: inline-flex;
+}
+
+.nav li {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.nav li:hover {
+    color: gray;
+}
+
+.nav .active li {
+    color: lightskyblue;
+    border-bottom: 1px solid lightskyblue;
+}
+
+.nav .active li:hover {
+    background: lightskyblue;
+    color: white;
+}
+
+.tab-content {
+    padding: 2em;
+    ;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
